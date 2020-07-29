@@ -12,14 +12,18 @@ let numWrong = 0;
 // Loop over the chars in `word` and create divs.
 //
 const createDivsForChars = (word) => {
-  // Replace this with your code
+  for (const char of word) {
+    $('#word-container').append(`<div class="letter-box ${char}"></div>`);
+  }
 };
 
 
 // Loop over each letter in `ALPHABET` and generate buttons.
 //
 const generateLetterButtons = () => {
-  // Replace this with your code
+  for (const letter of ALPHABET) {
+    $('#letter-buttons').append(`<button class="buttons-box ${letter}">${letter}</button>`);
+  }
 };
 
 
@@ -28,7 +32,8 @@ const generateLetterButtons = () => {
 // `buttonEl` is an `HTMLElement` object.
 //
 const disableLetterButton = (buttonEl) => {
-  // Replace this with your code
+  const jQueryEl = $(buttonEl);
+  buttonEl.disabled=true;
 };
 
 
